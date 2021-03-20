@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLstudy</title>
+</head>
+<body>
+    <h2>HTMLstudy</h2>
+    <h3>HTML 基本标签</h3>
+    <h4>4.5  <ins>&lt;div&gt;&lt;/div&gt;</ins> and <ins>&lt;span&gt;&lt;/span&gt;</ins> label</h4>
+    <p>&lt;div&gt; and &lt;span&gt; 是没有语义的，他们就是一个盒子，用来装内容的。</p>
+    <p><strong>特点1.div标签用来布局但是一行只能放一个div标签，且自动换行。<em>大盒子</em><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.span标签用来布局一行可以放多个span标签。<em>小盒子</em></strong>
+    </p>
+    例如: <img src="图片/示例.PNG">  <br>
+     页面显示 <br><img src="图片/示例1.PNG" >
+
+
+    <h3>4.6 图像标签和路径(重点)</h3>
+    <h4>1.图像标签</h4>
+    <p>在HTML中用<strong>img标签</strong>来定义HTML页面中的图像<br>
+    并且img标签有多种属性如<ins>src(这个是必须写的),alt，title,width,height,border</ins></p>
+    <p>src它用于指定图像文件的路径和文件名 src="路径名"<br>
+    alt替换文本 图像显示不出来的时候用文字替换 alt="替换的文字"<br>
+    title提示文本 鼠标放在图片上时提示的文字 title="提示的文字"<br>
+    width设置图像的宽度，height设置图像的高度，border设置图像的边框粗细<br>
+    这三者的属性值为像素，一般只设置width和height其中一个，避免失帧</p>
+    <p>列如:&lt;img src="" alt="" title=""&gt;)</p>
+    <img src="图片/示例2.PNG" ><br>
+    页面显示<br><img src="图片/示例3.PNG" ><br>
+    <img src="图片/示例4.PNG" ><br>
+    页面显示<br>
+    <img src="图片/示例6.PNG" alt=""><br>
+    <strong>width height border 的用法<br></strong>
+    <!-- <img src="图片/示例2.PNG" alt="" title="" width=50 height=50 border=50> -->
+    <img src="图片/示例7.PNG" alt=""><br>
+    页面显示<br><img src="图片/示例8.PNG" alt=""><br>
+    <p><strong>图像标签属性注意点：</strong><br>
+       1.图像标签可以有多个属性，属性必须写在标签后面<br>
+       2.属性之间不分先后顺序，标签名与属性，属性与属性之间均已空格隔开<br>
+       3.属性采取键值对的格式，即key="value"的格式，属性="属性值"</p>
+
+    <h3>路径</h3>
+     1.相对路径：以<font color="red">引用文件所在位置</font>为参考基础，简单来说<font color="red"> 
+         图片相对HTML页面的位置。</font><br>
+     <p>相对路径分为三种：同一级路径，上一级路径，下一级路径  </p> 
+     <p><font color="blue">同一级路径直接写图片的名字<br>下一级路径写:图片的文件名/图片名
+    上一级路径写: ../图片的名字 <br><br>
+     2.绝对路径:是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径（不常用）<br>
+    例如，"C:\Users\yanlong\Desktop\htmlstudy\图片"或完整的网络地址"https://www.baidu.com/index.php?tn=monline_3_dg"
+    </font></p>
+
+
+    <h3><font color="red">4.7超链接标签(重点)</font></h3>
+    <p><font color="red">1.链接分类<br></font></p>
+    <p><font color="blue">(1)外部链接 (2)内部链接 (3)空链接 (4)下载链接 (5)网页元素链接<br>
+    外部链接：例如<img src="图片/示例10.PNG" alt=""> <br>
+    内部链接：网站内部页面之间的相互链接 &lt;a href="3.html " target="_blank "&gt;表格 &lt;/a&gt;<br>
+    空链接：当时还没有确定目标时，&lt;a href="#" target="" &gt;my web &lt;/a&gt;<br>
+    下载链接：如果href里面是文件或压缩包，会下载这个文件。地址链接的是文件.exe或者是zip等压缩包形式<br>
+    网页元素链接：在网页中的各种网页元素，如文本，图像，表格，音频，视频等都可以添加超链接<br>
+    &lt;a&gt;标签 有属性<ins>href</ins>(必须属性)，target <br>
+    href用于指定链接目标的url地址<br>
+    target用于指定链接页面的打开方式，其中"_self"为默认值当前页面直接跳转到指定链接页面， <br> "_blank"为在新窗口中打开</font></p>
+    <p><font color="red">2.链接的语法格式<br>
+        &lt;a href="跳转目标" target="目标窗口的弹出方式"&gt; 文本或图像 &lt;/a&gt; <br>
+        两种弹出方式: <br>
+        (1)外部链接<br>
+        <img src="图片/示例9.PNG" alt=""> <br>
+        <a href="http://www.bilibili.com" target="_blank">哔哩哔哩</a><br>
+        <a href="http://www.huya.com" target="">虎牙直播</a><br>
+        (2)内部链接<br>
+        &lt;a href="3.html " target="_blank "&gt;表格 &lt;/a&gt;<br>
+        <a href="3.html " target="_blank ">表格 </a><br>
+        (3)空链接<br>
+        &lt;a href="#" target="_blank" &gt;my web &lt;/a&gt;<br>
+        页面显示为: <br>
+        <a href="#" target="_blank" >my web </a><br>
+        (4)下载链接<br>
+        &lt;a href="图片/示例11.zip" target="_blank" &gt;下载文件 &lt;/a&gt;<br>
+        <a href="图片/示例11.zip" target="_blank" >下载文件</a><br>
+        (5)网页元素链接<br>
+        &lt;a href="http://www.baidu.com" target="_blank "&gt; &lt;img src="图片/示例12.PNG" alt=""&gt; &lt;/a&gt;<br>
+        <a href="http://www.baidu.com" target="_blank "> <img src="图片/示例12.PNG" alt=""> </a><br>
+    </font></p>    
+</body>
+</html>
